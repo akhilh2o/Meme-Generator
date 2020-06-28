@@ -1,0 +1,36 @@
+*{
+  font-size: 14px;
+}
+header{
+  margin-top: -50px;
+  height: 150px;
+  text-align: center;
+  padding: 20px;
+  background-color: #F7F6FB;
+}
+.brand{
+  font-family: 'Marck Script', cursive;
+  color: #300eda;
+}
+.brand h1{
+  font-size: 3rem;
+  position: absolute; 
+  left: 50%; 
+  transform: translatex(-50%); 
+}
+/* Mobile */
+
+@media only screen and (min-width: 320px) and (max-width: 481px) {
+  
+header{
+  margin-top: -50px;
+  height: 150px;
+  text-align: left;
+  background-color: #F7F6FB;
+}
+  .brand h1{
+    left: 50%;
+    font-size: 1.5rem;
+  }
+
+}

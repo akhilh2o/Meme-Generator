@@ -1,0 +1,48 @@
+<div class="app">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card drop-shadow">
+          <div class="card-body">
+            <form >
+              <div class="form-group">
+                <label for="">Select an Image</label>
+                <input type="file" class="form-control" accept="image/*" (change)="preview($event)">
+              </div>
+              <div class="form-group">
+                <label for="">Top Text</label>
+                <input type="text" class="form-control" name="topText" [(ngModel)]="topText" (keyup)="drawText()">
+              </div>
+
+              <div class="form-group">
+                <label for="">Bottom Text</label>
+                <input type="text" class="form-control" name="buttomText" [(ngModel)]="bottomText" (keyup)="drawText()">
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="">Text Color</label>
+                    <color-chrome (onChangeComplete)="canvasTextColor($event)"></color-chrome>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="">Background Color</label>
+                    <color-chrome (onChangeComplete)="canvasBgColor($event)"></color-chrome>
+                  </div>
+                </div>
+              </div>
+              <button class="btn btn-outline-primary btn-block mt-5" (click)="downloadImg()">Download</button>
+             
+
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <canvas class="drop-shadow" #memeCanvas width="700" height="800" style="background-color: #f9f9fd;"></canvas>
+      </div>
+    </div>
+  </div>
+</div>
